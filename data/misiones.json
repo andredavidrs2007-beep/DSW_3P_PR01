@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "nombre": "Matar a Dios",
+        "dificultad": "Dificil",
+        "recompensa": 100,
+        "completada": false
+    }
+]
