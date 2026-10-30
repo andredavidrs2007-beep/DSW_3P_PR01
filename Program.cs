@@ -50,6 +50,11 @@ app.MapControllers();
 
 app.Run();
 
+//ORM
+// dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+// dotnet add package Microsoft.EntityFrameworkCore.Design
+// dotnet tool install --global dotnet-ef --version 10.0.*
+
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);

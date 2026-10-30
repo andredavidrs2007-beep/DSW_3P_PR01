@@ -83,7 +83,7 @@ public class MisionController : ControllerBase
     }
 
     //DELETE - Eliminar Mision
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:int}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(404)]
     public IActionResult Eliminar(int id)
