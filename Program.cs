@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using DSW_3P_PR01.Data;
 using DSW_3P_PR01.Repositories;
 using DSW_3P_PR01.Services;
 
@@ -11,7 +13,12 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<IMisionRepository, MisionJsonRepository>();
 builder.Services.AddScoped<IMisionService, MisionService>();
-
+//Configuracion de SQL Server
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("SqlServerConnection")
+    )
+);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
