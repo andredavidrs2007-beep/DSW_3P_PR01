@@ -11,7 +11,7 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IMisionRepository, MisionJsonRepository>();
+builder.Services.AddScoped<IMisionRepository, MisionSQLRepository>();
 builder.Services.AddScoped<IMisionService, MisionService>();
 //Configuracion de SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>

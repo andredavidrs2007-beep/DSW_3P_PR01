@@ -25,7 +25,7 @@ public class MisionController : ControllerBase
     }
 
     //GET - Obtener mision por ID
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(List<Mision>), 200)]
     [ProducesResponseType(404)]
     public IActionResult ObtenerPorId(int id)
@@ -62,7 +62,7 @@ public class MisionController : ControllerBase
     }
 
     //PUT - Actualizar Mision
-    [HttpPut("{id}")]
+    [HttpPut("{id:int}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(404)]
     [ProducesResponseType(400)]
