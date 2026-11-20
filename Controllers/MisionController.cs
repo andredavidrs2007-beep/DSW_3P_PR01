@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using DSW_3P_PR01.Services;
 using DSW_3P_PR01.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DSW_3P_PR01.Controllers;
 
 [ApiController]
 [Route("api/[Controller]")]
+[Authorize]
 public class MisionController : ControllerBase
 {
     private readonly IMisionService _service;

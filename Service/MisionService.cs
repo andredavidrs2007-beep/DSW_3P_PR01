@@ -16,7 +16,7 @@ public class MisionService : IMisionService
     {
         if (string.IsNullOrWhiteSpace(mision.Nombre))
             throw new ArgumentException("El nombre no puede estar vacio");
-        if (mision.Dificultad != "Facil" && mision.Dificultad != "Media" && mision.Dificultad != "Dificil")
+        if (mision.Dificultad != "Fácil" && mision.Dificultad != "Media" && mision.Dificultad != "Difícil")
             throw new ArgumentException("La dificultad debe ser Facil, Media o Dificil");
         if (mision.RecompensaXP < 0)
             throw new ArgumentException("La experiencia no puede ser negativa");
