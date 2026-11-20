@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using DSW_3P_PR01.Services;
 using DSW_3P_PR01.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DSW_3P_PR01.Controllers;
 
 [ApiController]
 [Route("api/[Controller]")]
+[Authorize]
 public class MisionController : ControllerBase
 {
     private readonly IMisionService _service;
@@ -25,7 +27,7 @@ public class MisionController : ControllerBase
     }
 
     //GET - Obtener mision por ID
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(List<Mision>), 200)]
     [ProducesResponseType(404)]
     public IActionResult ObtenerPorId(int id)
@@ -62,7 +64,7 @@ public class MisionController : ControllerBase
     }
 
     //PUT - Actualizar Mision
-    [HttpPut("{id}")]
+    [HttpPut("{id:int}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(404)]
     [ProducesResponseType(400)]
@@ -83,7 +85,7 @@ public class MisionController : ControllerBase
     }
 
     //DELETE - Eliminar Mision
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:int}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(404)]
     public IActionResult Eliminar(int id)

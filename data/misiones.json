@@ -1,9 +1,16 @@
 [
     {
-        "id": 1,
-        "nombre": "Matar a Dios",
-        "dificultad": "Dificil",
-        "recompensa": 100,
-        "completada": false
+        "Id": 1,
+        "Nombre": "Matar a Dios",
+        "Dificultad": "Dificil",
+        "Recompensa": 100,
+        "Completada": false
+    },
+    {
+        "Id": 2,
+        "Nombre": "Obtener monedas",
+        "Dificultad": "Dificil",
+        "Recompensa": 50,
+        "Completada": false
     }
 ]
